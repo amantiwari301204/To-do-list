@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+
+.header{
+    background-color: royalblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: aliceblue;
+
+}
+
+.content{
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+}
+
+.addtask{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: black; */
+     margin-top: 1rem;
+}
+
+.entry{
+   
+    position: relative;
+    width: 20rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.entry input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(192, 190, 190);
+    border-radius: 0.5rem;
+    outline: none;
+    padding-left:1.25rem ;
+    background: none;
+    transition: all 160ms ease-in;
+}
+
+.entry input:hover{
+    border-color: royalblue;
+}
+.entry input:focus{
+    border-color:royalblue;
+}
+
+.entry label{
+    position:absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 0.2rem;
+    color: royalblue;
+    cursor: text;
+    transition: top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+    border-radius: 2rem;
+}
+
+.entry input:focus ~ label, .entry input:not(:placeholder-shown)~ label{
+    top: -0.5rem;
+    font-size: 0.8rem;
+    left: 0.8rem;
+    background-color: aliceblue;
+}
+.img{
+    width: 40px;
+    position: absolute;
+    left: 20.2rem;
+    top: 0.4rem;
+    display: none;
+    cursor: pointer;
+}
+
+.entry input:focus ~ .img,.entry input:not(:placeholder-shown)~ img{
+    display: block;
+}
+
+.myTask{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    border: 2px solid royalblue;
+    border-radius: 0.5rem;
+}
+
+.task-area{
+    border: 2px solid black;
+    padding: 20px;
+    border-color: royalblue;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+
+}
+
+.task-head{
+    display: flex;
+    align-items: center;
+}
+
+.clear-all{
+    background-color: rgb(255, 17, 0);
+    border: none;
+    border-left: 1px solid royalblue;
+    border-top-right-radius: 0.5rem;
+    width: 10%;
+    height: 100%;
+    padding: 10px;
+    color: aliceblue;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.your-task{
+    padding: 3px;
+    background-color: aliceblue;
+    color: royalblue;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+}
+
+.task-list{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.task-content{
+    width: 100%;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.2rem;
+}
+.check{
+    padding: 20px;
+    size: 2rem;
+}
+
+.task-lsit span{
+    width: 100%;
+}
+.bin{
+    width: 27px;
+     display: flex;
+     align-content: flex-end;
+
+}
+
+@media(max-width:768px){
+    .clear-all{
+        width: 20%;
+    }
+}
+
+.confirm{
+    display: flex;
+    flex-direction: column;
+    background: rosybrown;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.inConfirm{
+    background-color: aliceblue;
+    padding: 20px;
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.26);
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.inConfirm button{
+    padding: 10px;
+    width: 20%;
+    border: none;
+    font-size: 14px;
+    color: aliceblue;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.clear-yes{
+    background-color: rgb(255, 17, 0);
+}
+.clear-no{
+    background-color: royalblue;
+}
